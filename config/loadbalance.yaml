@@ -97,7 +97,7 @@ proxy-groups:
   interval: '30'
  # interface-name: modem
 
-#@#@Ganteng22@#@#
+https://github.com/tanpanama77/
 rule-providers:
   rule_Whatsapp:
     type: file
@@ -142,7 +142,7 @@ rule-providers:
     url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_personalads.yaml
     path: "./rule_provider/s-iklan.yaml"
     interval: 86400
-#@#@Ganteng22@#@#
+#by.https://github.com/tanpanama77/
 proxy-providers:
   AK ID:
     type: file
@@ -165,7 +165,7 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: '180'     
-#@#@Ganteng22@#@#
+#@by.https://github.com/tanpanama77/
 dns:
   nameserver:
   - 8.8.8.8
