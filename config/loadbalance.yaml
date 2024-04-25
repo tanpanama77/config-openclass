@@ -1,1 +1,243 @@
+#@#@Ganteng22@#@#
+proxy-groups:
+- name: Terhubung 🚀
+  type: load-balance
+  strategy: round-robin
+  disable-udp: false
+  use:
+  - AK ID
+  url: http://www.gstatic.com/generate_204
+  interval: '120'
+- name: STREAMING
+  type: load-balance
+  strategy: round-robin
+  disable-udp: false
+  use:
+  - AK SG
+  url: http://www.gstatic.com/generate_204
+  interval: '120'
+- name: INDONESIA
+  type: load-balance
+  strategy: round-robin
+  disable-udp: false
+  use:
+  - AK ID
+  url: http://www.gstatic.com/generate_204
+  interval: '120'
+- name: DIRECT MODEM
+  type: select
+  disable-udp: false
+  proxies:
+  - DIRECT
+  url: http://www.gstatic.com/generate_204
+  interval: '30'
+  interface-name: modem
+- name: DIRECT ORBIT
+  type: select
+  disable-udp: false
+  proxies:
+  - DIRECT
+  url: http://www.gstatic.com/generate_204
+  interval: '30'
+  interface-name: orbit
+- name: DIRECT ETH1
+  type: select
+  disable-udp: false
+  proxies:
+  - DIRECT
+  url: http://www.gstatic.com/generate_204
+  interval: '30'
+  interface-name: eth1
+- name: Games-TCP-Lobby 🛴
+  type: select
+  disable-udp: false
+  proxies:
+  - DIRECT MODEM
+  - DIRECT ORBIT
+  - DIRECT ETH1
+  - Terhubung 🚀
+  use:
+  - AK GAME
+  url: http://www.gstatic.com/generate_204
+  interval: '30'
+ # interface-name: modem
+- name: Game-Port-UDP 🏍️
+  type: select
+  disable-udp: false
+  proxies:
+  - DIRECT MODEM
+  - DIRECT ORBIT
+  - DIRECT ETH1
+  - Terhubung 🚀
+  use:
+  - AK GAME
+  url: http://www.gstatic.com/generate_204
+  interval: '30'
+ # interface-name: modem
+- name: Porn/Ads 🚦
+  type: select
+  strategy: consistent-hashing
+  disable-udp: false
+  proxies:
+  - Terhubung 🚀
+  - REJECT
+  url: http://www.gstatic.com/generate_204
+  interval: '120'
+- name: WA 🚥
+  type: select
+  strategy: consistent-hashing
+  disable-udp: false
+  proxies:
+  - DIRECT MODEM
+  - DIRECT ORBIT
+  - DIRECT ETH1
+  use:
+  - AK ID
+  url: http://www.gstatic.com/generate_204
+  interval: '30'
+ # interface-name: modem
 
+#@#@Ganteng22@#@#
+rule-providers:
+  rule_Whatsapp:
+    type: file
+    behavior: classical
+    path: "./rule_provider/s-whatsapp.yaml"
+  rule_Reject:
+    type: file
+    behavior: classical
+    path: "./rule_provider/s-reject.yaml"
+  rule_games:
+    type: file
+    behavior: domain
+    path: "./rule_provider/s-games.yaml"
+  rule_Gaming:
+    type: file
+    behavior: classical
+    path: "./rule_provider/s-gaming.yaml"
+#  rule_portgames:
+#    type: file
+ #   behavior: classical
+#    path: "./rule_provider/s-portgames.yaml"
+
+  STREAMING:
+    type: file
+    behavior: classical
+    path: "./rule_provider/streaming.yaml"
+
+  INDONESIA:
+    type: file
+    behavior: classical
+    path: "./rule_provider/indonesia.yaml"
+
+  rule_umum:
+    type: file
+    behavior: classical
+    path: "./rule_provider/s-umum.yaml"
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_umum.yaml
+    interval: 86400
+  rule_Iklan:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_personalads.yaml
+    path: "./rule_provider/s-iklan.yaml"
+    interval: 86400
+#@#@Ganteng22@#@#
+proxy-providers:
+  AK ID:
+    type: file
+    path: "./proxy_provider/Akun-IND.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: '180'
+  AK SG:
+    type: file
+    path: "./proxy_provider/Akun-SGP.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: '180'
+  AK GAME:
+    type: file
+    path: "./proxy_provider/Akun-GAME.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: '180'     
+#@#@Ganteng22@#@#
+dns:
+  nameserver:
+  - 8.8.8.8
+  - 8.8.4.4
+  - 1.1.1.1
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  fake-ip-range: 198.18.0.1/16
+  listen: 127.0.0.1:7874
+  fake-ip-filter:
+  - "+.*"
+  default-nameserver:
+  - 8.8.8.8
+  - 1.1.1.1
+redir-port: 7892
+tproxy-port: 7895
+port: 7890
+socks-port: 7891
+mixed-port: 7893
+mode: rule
+log-level: info
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ganteng22
+bind-address: "*"
+external-ui: "/usr/share/openclash/ui"
+ipv6: false
+tun:
+  enable: true
+  stack: system
+  dns-hijack:
+  - tcp://8.8.8.8:53
+  - tcp://8.8.4.4:53
+  - tcp://1.1.1.1:53
+profile:
+  store-selected: true
+  store-fake-ip: true
+unified-delay: true
+rules:
+- DST-PORT,123,DIRECT
+- DST-PORT,7895,REJECT
+- DST-PORT,7892,REJECT
+- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+#- RULE-SET,rule_umum,Terhubung 🚀
+- RULE-SET,rule_games,Games-TCP-Lobby 🛴
+- RULE-SET,rule_Gaming,Games-TCP-Lobby 🛴
+#- RULE-SET,rule_portgames,Game-Port-UDP 🏍️
+- RULE-SET,rule_Iklan,Porn/Ads 🚦
+- RULE-SET,rule_Reject,Porn/Ads 🚦
+- RULE-SET,rule_Whatsapp,WA 🚥
+- RULE-SET,STREAMING,STREAMING
+- RULE-SET,INDONESIA,INDONESIA
+
+- NOT,((RULE-SET,rule_umum)),Game-Port-UDP 🏍️
+
+#MLBB
+- DST-PORT,5001/5003/9001/30000-30200,Game-Port-UDP 🏍️,tcp
+
+- DST-PORT,5001/5003/9001/30000-30200,Game-Port-UDP 🏍️,udp
+
+#FF
+- DST-PORT,39003/39698/39779,Game-Port-UDP 🏍️,tcp
+
+- DST-PORT,10001/10003/10012,Game-Port-UDP 🏍️,udp
+
+#PUBG
+- DST-PORT,10012/17500,Game-Port-UDP 🏍️,tcp
+
+- DST-PORT,10010/10013/10039/10096/10491/10612/11455/12235/13748/13894/13972/20000-20002/7080-8000,Game-Port-UDP 🏍️,udp
+
+#Clash of Clans (COC) & Clash Royale
+- DST-PORT,9330-9340,Game-Port-UDP 🏍️,tcp
+
+- MATCH,GLOBAL 
