@@ -1,0 +1,123 @@
+sniffer:
+  enable: true
+  sniffing:
+    - tls
+    - http
+tun:
+  enable: true
+  stack: system 
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - tcp://114.114.114.114:53
+    - tcp://119.29.29.29:53
+    - tcp://1.1.1.1:53
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: "SON"
+bind-address: "*"
+unified-delay: true
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  ipv6: false
+  use-host: true
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7874
+  nameserver:
+    - 114.114.114.114
+    - 119.29.29.29
+    - 1.1.1.1
+rule-providers:
+  STREAMING:
+    type: file
+    behavior: classical
+    path: "./rule_provider/streaming.yaml"
+
+  INDONESIA:
+    type: file
+    behavior: classical
+    path: "./rule_provider/indonesia.yaml"
+
+  IKLAN:
+    type: file
+    behavior: classical
+    path: "./rule_provider/iklan.yaml"
+
+  WA:
+    type: file
+    behavior: classical
+    path: "./rule_provider/whatsapp.yaml"
+
+proxy-providers:
+  idn:
+    type: file
+    path: "./proxy_provider/Indonesia.yaml"
+    health-check:
+      enable: true
+      interval: 360
+      url: http://www.gstatic.com/generate_204
+
+  sg:
+    type: file
+    path: "./proxy_provider/Singapore.yaml"
+    health-check:
+      enable: true
+      interval: 360
+      url: http://www.gstatic.com/generate_204
+
+proxy-groups:
+- name: INTERNET
+  type: fallback
+  disable-udp: false
+  proxies:
+    - SG
+    - IDN
+
+- name: RULE-ID
+  type: fallback
+  disable-udp: false
+  proxies:
+    - IDN
+    - SG
+
+- name: TEST AKUN
+  type: select
+  disable-udp: false
+  use:
+    - idn
+    - sg
+
+#================ ISP =================
+- name: IDN
+  type: url-test
+  disable-udp: false
+#  strategy: round-robind
+  use:
+    - idn
+
+- name: SG
+  type: url-test
+  disable-udp: false
+#  strategy: consistent-hashing
+  use:
+    - sg
+
+rules:
+- RULE-SET,INDONESIA,RULE-ID
+- RULE-SET,WA,RULE-ID
+- RULE-SET,STREAMING,INTERNET
+- MATCH,GLOBAL
+
+
+
