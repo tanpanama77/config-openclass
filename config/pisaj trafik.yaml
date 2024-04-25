@@ -12,6 +12,7 @@ tun:
     - tcp://114.114.114.114:53
     - tcp://119.29.29.29:53
     - tcp://1.1.1.1:53
+    - tcp://8.8.8.8:53
 port: 7890
 socks-port: 7891
 redir-port: 7892
@@ -22,7 +23,7 @@ mode: rule
 log-level: silent
 allow-lan: true
 external-controller: 0.0.0.0:9090
-secret: "SON"
+secret: "nama77"
 bind-address: "*"
 unified-delay: true
 profile:
@@ -38,39 +39,35 @@ dns:
     - 114.114.114.114
     - 119.29.29.29
     - 1.1.1.1
+    - 8.8.8.8
 rule-providers:
-  STREAMING:
+  Rule-Streaming:
     type: file
     behavior: classical
     path: "./rule_provider/streaming.yaml"
 
-  INDONESIA:
+  Rule-Indonesia:
     type: file
     behavior: classical
     path: "./rule_provider/indonesia.yaml"
 
-  IKLAN:
-    type: file
-    behavior: classical
-    path: "./rule_provider/iklan.yaml"
-
-  WA:
+  Rule-Whatsapp:
     type: file
     behavior: classical
     path: "./rule_provider/whatsapp.yaml"
 
 proxy-providers:
-  idn:
+  IND:
     type: file
-    path: "./proxy_provider/Indonesia.yaml"
+    path: "./proxy_provider/Akun-IND.yaml"
     health-check:
       enable: true
       interval: 360
       url: http://www.gstatic.com/generate_204
 
-  sg:
+  SGP:
     type: file
-    path: "./proxy_provider/Singapore.yaml"
+    path: "./proxy_provider/Akun-SGP.yaml"
     health-check:
       enable: true
       interval: 360
@@ -84,39 +81,30 @@ proxy-groups:
     - SG
     - IDN
 
-- name: RULE-ID
+- name: RULE-IND
   type: fallback
   disable-udp: false
   proxies:
     - IDN
     - SG
 
-- name: TEST AKUN
+#================ ISP =================
+- name: IDN
   type: select
   disable-udp: false
   use:
-    - idn
-    - sg
-
-#================ ISP =================
-- name: IDN
-  type: url-test
-  disable-udp: false
-#  strategy: round-robind
-  use:
-    - idn
+    - IDN
 
 - name: SG
-  type: url-test
+  type: select
   disable-udp: false
-#  strategy: consistent-hashing
   use:
-    - sg
+    - SGP
 
 rules:
-- RULE-SET,INDONESIA,RULE-ID
-- RULE-SET,WA,RULE-ID
-- RULE-SET,STREAMING,INTERNET
+- RULE-SET,Rule-Indonesia,RULE-IND
+- RULE-SET,Rule-Whatsapp,RULE-IND
+- RULE-SET,Rule-Streaming,INTERNET
 - MATCH,GLOBAL
 
 
