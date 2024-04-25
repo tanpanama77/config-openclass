@@ -1,0 +1,313 @@
+payload:
+
+  # E-Wallet / Dompet Digital
+  - DOMAIN-SUFFIX,gojek.com
+  - DOMAIN-SUFFIX,gobiz.co.id
+  - DOMAIN-SUFFIX,ovo.id
+  - DOMAIN-SUFFIX,dana.id
+  - DOMAIN-SUFFIX,linkaja.id
+  - DOMAIN-SUFFIX,octoclicks.co.id
+  - DOMAIN-SUFFIX,i-saku.com
+  - DOMAIN-SUFFIX,doku.com
+  - DOMAIN-SUFFIX,shopeepay.co.id
+  - DOMAIN-SUFFIX,grab.com
+  - DOMAIN-SUFFIX,grabtaxi.com
+  - DOMAIN-KEYWORD,gojek
+  - DOMAIN-KEYWORD,gobiz
+  - DOMAIN-KEYWORD,ovo
+  - DOMAIN-KEYWORD,dana
+  - DOMAIN-KEYWORD,linkaja
+  - DOMAIN-KEYWORD,octoclicks
+  - DOMAIN-KEYWORD,i-saku
+  - DOMAIN-KEYWORD,doku
+  - DOMAIN-KEYWORD,shopeepay
+  - DOMAIN-KEYWORD,grab
+  - DOMAIN-KEYWORD,grabtaxi
+  # Keyword ID
+  - DOMAIN-KEYWORD,.id
+  - DOMAIN-KEYWORD,co.id
+  - DOMAIN-KEYWORD,ac.id
+  - DOMAIN-KEYWORD,or.id
+  - DOMAIN-KEYWORD,go.id
+  - DOMAIN-KEYWORD,my.id
+  - DOMAIN-KEYWORD,web.id
+  - DOMAIN-KEYWORD,biz.id
+  - DOMAIN-KEYWORD,net.id
+  - DOMAIN-KEYWORD,mil.id
+  - DOMAIN-KEYWORD,sch.id
+  - DOMAIN-KEYWORD,desa.id
+  - DOMAIN-KEYWORD,ponpes.id
+
+  #Go-Pay [Go-Jek]
+  - DOMAIN-KEYWORD,gopay-topup
+
+  #OVO
+  - DOMAIN-SUFFIX,ovo.id
+
+  #LinkAja
+  - DOMAIN-SUFFIX,linkaja.com
+
+  #Dana
+  - DOMAIN-SUFFIX,split.io
+  - DOMAIN-SUFFIX,dana.id
+  - DOMAIN-SUFFIX,innov8.id
+
+  #Doku
+  - DOMAIN-SUFFIX,dokuwallet.com
+
+  #BCA
+  - DOMAIN-SUFFIX,klikbca.com
+
+  #BRI (BRI Link,  BRImo, BRIcredit)
+  - DOMAIN-SUFFIX,bri.co.id
+
+  #Mandiri
+  - DOMAIN-SUFFIX,mandiri.co.id
+
+  #Bank Syariah Mandiri
+  - DOMAIN-SUFFIX,bsm.co.id
+
+  #Muamalat
+  - DOMAIN-SUFFIX,bankmuamalat.co.id
+  # E-Wallet / Dompet Digital
+  - DOMAIN-SUFFIX,gojek.com
+  - DOMAIN-SUFFIX,gobiz.co.id
+  - DOMAIN-SUFFIX,ovo.id
+  - DOMAIN-SUFFIX,dana.id
+  - DOMAIN-SUFFIX,linkaja.id
+  - DOMAIN-SUFFIX,octoclicks.co.id
+  - DOMAIN-SUFFIX,i-saku.com
+  - DOMAIN-SUFFIX,doku.com
+  - DOMAIN-SUFFIX,shopeepay.co.id
+  - DOMAIN-SUFFIX,grab.com
+  - DOMAIN-SUFFIX,grabtaxi.com
+  - DOMAIN-KEYWORD,gojek
+  - DOMAIN-KEYWORD,gobiz
+  - DOMAIN-KEYWORD,ovo
+  - DOMAIN-KEYWORD,dana
+  - DOMAIN-KEYWORD,linkaja
+  - DOMAIN-KEYWORD,octoclicks
+  - DOMAIN-KEYWORD,i-saku
+  - DOMAIN-KEYWORD,doku
+  - DOMAIN-KEYWORD,shopeepay
+  - DOMAIN-KEYWORD,grab
+  - DOMAIN-KEYWORD,grabtaxi
+  # Keyword ID
+  - DOMAIN-KEYWORD,.id
+  - DOMAIN-KEYWORD,co.id
+  - DOMAIN-KEYWORD,ac.id
+  - DOMAIN-KEYWORD,or.id
+  - DOMAIN-KEYWORD,go.id
+  - DOMAIN-KEYWORD,my.id
+  - DOMAIN-KEYWORD,web.id
+  - DOMAIN-KEYWORD,biz.id
+  - DOMAIN-KEYWORD,net.id
+  - DOMAIN-KEYWORD,mil.id
+  - DOMAIN-KEYWORD,sch.id
+  - DOMAIN-KEYWORD,desa.id
+  - DOMAIN-KEYWORD,ponpes.id
+
+  #Go-Pay [Go-Jek]
+  - DOMAIN-KEYWORD,gopay-topup
+
+  #OVO
+  - DOMAIN-SUFFIX,ovo.id
+
+  #LinkAja
+  - DOMAIN-SUFFIX,linkaja.com
+
+  #Dana
+  - DOMAIN-SUFFIX,split.io
+  - DOMAIN-SUFFIX,dana.id
+  - DOMAIN-SUFFIX,innov8.id
+
+  #Doku
+  - DOMAIN-SUFFIX,dokuwallet.com
+
+  #BCA
+  - DOMAIN-SUFFIX,klikbca.com
+
+  #BRI (BRI Link,  BRImo, BRIcredit)
+  - DOMAIN-SUFFIX,bri.co.id
+
+  #Mandiri
+  - DOMAIN-SUFFIX,mandiri.co.id
+
+  #Bank Syariah Mandiri
+  - DOMAIN-SUFFIX,bsm.co.id
+
+  #Muamalat
+  - DOMAIN-SUFFIX,bankmuamalat.co.id
+  # MARKET PLACE
+  - DOMAIN-SUFFIX,shopee.co.id
+  - DOMAIN-SUFFIX,shopeemobile.com
+  - DOMAIN-SUFFIX,bukalapak.com
+  - DOMAIN-SUFFIX,lazada.co.id
+  - DOMAIN-SUFFIX,blibli.com
+  - DOMAIN-SUFFIX,orami.co.id
+  - DOMAIN-SUFFIX,ralali.com
+  - DOMAIN-SUFFIX,bhinneka.com
+  - DOMAIN-SUFFIX,jd.id
+  - DOMAIN-SUFFIX,zalora.co.id
+  - DOMAIN-KEYWORD,tokopedia
+  - DOMAIN-KEYWORD,lazada
+  - DOMAIN-KEYWORD,blibli
+  - DOMAIN-KEYWORD,orami
+  - DOMAIN-KEYWORD,ralali
+  - DOMAIN-KEYWORD,bhinneka
+  - DOMAIN-KEYWORD,zalora
+
+# > RCTI Plus
+  - DOMAIN-SUFFIX,dash-inews.rctiplus.id
+  - DOMAIN-SUFFIX,api-v2.rctiplus.com
+  - DOMAIN-SUFFIX,static.rctiplus.id
+  - DOMAIN-SUFFIX,api.rctiplus.com
+  - DOMAIN-SUFFIX,zeus.rcti.plus
+  - DOMAIN-SUFFIX,m-rcti.rctiplus.i
+# > Vidio
+  - DOMAIN-SUFFIX,thumbor.prod.vid.id
+  - DOMAIN-SUFFIX,static-playback.prod.vid.id
+  - DOMAIN-SUFFIX,vid.id
+  - DOMAIN-SUFFIX,static-playback-vidio-com.akamaized.net
+  - DOMAIN-SUFFIX,plenty.vidio.com
+  - DOMAIN-SUFFIX,vidio.com
+  - DOMAIN-SUFFIX,www.vidio.com
+  - DOMAIN-SUFFIX,api.vidio.com
+  - DOMAIN-SUFFIX,api-ns.vidio.com
+  - DOMAIN-SUFFIX,media-vidio-com.akamaized.net
+  - DOMAIN-SUFFIX,static-web-prod-vidio.akamaized.net
+  - DOMAIN-SUFFIX,geo-id-media-vidio-com.akamaized.net
+  - DOMAIN-SUFFIX,hermes.vidio.com
+  - DOMAIN-SUFFIX,token-media-vidio-com.akamaized.net
+  - DOMAIN-SUFFIX,etslive-2-vidio-com.akamaized.net
+  - DOMAIN-SUFFIX,live-production.secureswiftcontent.com
+  - DOMAIN-SUFFIX,secureswiftcontent.com
+  - DOMAIN-SUFFIX,vidiocdn.com
+  - DOMAIN-KEYWORD,vidio
+# > Mncnow
+  - DOMAIN-SUFFIX,mncnow.id
+  - DOMAIN-SUFFIX,mncplay.id
+  - DOMAIN-KEYWORD,mncnow
+  - DOMAIN-KEYWORD,mncplay
+# > IQIYI
+  - DOMAIN,intel-cache.m.iqiyi.com
+  - DOMAIN,intel-cache.video.iqiyi.com
+  - DOMAIN,intl-rcd.iqiyi.com
+  - DOMAIN,intl-subscription.iqiyi.com
+  - DOMAIN-SUFFIX,inter.ptqy.gitv.tv
+  - DOMAIN-SUFFIX,intl.iqiyi.com
+  - DOMAIN,cache.video.iqiyi.com
+  - DOMAIN-SUFFIX,inter.iqiyi.com
+  - DOMAIN-SUFFIX,iqiyipic.com
+  - DOMAIN-SUFFIX,intl-rcd.iqiyi.com
+  - DOMAIN-SUFFIX,intl-subscription.iqiyi.com
+  - DOMAIN-SUFFIX,intl.iqiyi.com
+  - DOMAIN-SUFFIX,iq.com
+  - IP-CIDR,104.85.165.17/32
+  - IP-CIDR,110.238.107.47/32
+  - IP-CIDR,118.26.32.162/32
+  - IP-CIDR,159.138.102.146/32
+  - IP-CIDR,184.51.102.0/24
+  - IP-CIDR,203.80.97.203/32
+  - IP-CIDR,210.71.227.202/32
+  - IP-CIDR,23.200.145.146/32
+  - IP-CIDR,23.210.215.186/32
+  - IP-CIDR,23.211.15.0/24
+  - IP-CIDR,23.219.172.0/24
+  - IP-CIDR,23.40.242.10/32
+  - IP-CIDR,23.59.252.0/24
+  - PROCESS-NAME,com.iqiyi.i18n
+  - PROCESS-NAME,com.iqiyi.i18n.tv
+  - PROCESS-NAME,com.qiyi.video
+# > MOLA TV
+  - DOMAIN-SUFFIX,mola.tv
+  - DOMAIN-SUFFIX,ws.mola.tv
+  - DOMAIN-SUFFIX,res.mola01.koicdn.com
+  - DOMAIN-SUFFIX,vod.cdn.mola.tv
+  - DOMAIN-SUFFIX,api.sent.tv
+  - DOMAIN-SUFFIX,cdn01.mola.tv
+  - DOMAIN-SUFFIX,cdn02.mola.tv
+# > UseeTV
+  - DOMAIN-SUFFIX,useetv.com
+  - DOMAIN-KEYWORD,useetv.com
+# > DensTV
+  - DOMAIN-SUFFIX,dens.tv
+# > We TV
+  - DOMAIN-SUFFIX,webrtcpunch.video.qq.com
+  - DOMAIN-SUFFIX,api.weathercn.com
+  - DOMAIN-SUFFIX,iflix-images.akamaized.net
+  - DOMAIN-SUFFIX,iflix.com
+  - DOMAIN-SUFFIX,v.smtcdns.com
+  - DOMAIN-SUFFIX,v.smtcdns.net
+  - DOMAIN-SUFFIX,vv.video.qq.com
+  - DOMAIN-SUFFIX,wetvdefaultts.tc.qq.com
+  - DOMAIN-SUFFIX,apd-vlive.apdcdn.tc.qq.com
+  - DOMAIN-SUFFIX,tc.qq.com
+  - DOMAIN-SUFFIX,wetv.vip
+  - DOMAIN-SUFFIX,wetvinfo.com
+  - DOMAIN-KEYWORD,wetv
+  - IP-CIDR,150.109.28.51/32,no-resolve
+# > LiveTVGO
+  - DOMAIN-SUFFIX,livetvgo.my.id
+  - DOMAIN-KEYWORD,livetvgo
+# > VIU
+  - DOMAIN-SUFFIX,cognito-identity.us-east-1.amazonaws.com
+  - DOMAIN-SUFFIX,mobileanalytics.us-east-1.amazonaws.com
+  - DOMAIN-SUFFIX,nowe.com
+  - DOMAIN-SUFFIX,viu.com
+  - DOMAIN-SUFFIX,viu.now.com
+  - DOMAIN-SUFFIX,viu.tv
+  - DOMAIN-SUFFIX,viuapi.io
+  - DOMAIN-SUFFIX,viu-static.akamaized.net
+  - DOMAIN-SUFFIX,viu-android-artifacts.s3-ap-southeast-1.amazonaws.com
+  - DOMAIN-SUFFIX,gcpvuclip-a.akamaihd.net
+  - DOMAIN-SUFFIX,vuclip-eip2.akamaized.net
+  - DOMAIN-SUFFIX,vuclipi-a.akamaihd.net
+  - DOMAIN-KEYWORD,vuclip
+  - DOMAIN-KEYWORD,viu
+  
+  # Netflix
+  - DOMAIN-SUFFIX,netflix.com
+  - DOMAIN-SUFFIX,netflix.net
+  - DOMAIN-SUFFIX,nflxext.com
+  - DOMAIN-SUFFIX,nflximg.com
+  - DOMAIN-SUFFIX,nflximg.net
+  - DOMAIN-SUFFIX,nflxso.net
+  - DOMAIN-SUFFIX,nflxvideo.net
+  - DOMAIN-SUFFIX,netflixdnstest0.com
+  - DOMAIN-SUFFIX,netflixdnstest1.com
+  - DOMAIN-SUFFIX,netflixdnstest2.com
+  - DOMAIN-SUFFIX,netflixdnstest3.com
+  - DOMAIN-SUFFIX,netflixdnstest4.com
+  - DOMAIN-SUFFIX,netflixdnstest5.com
+  - DOMAIN-SUFFIX,netflixdnstest6.com
+  - DOMAIN-SUFFIX,netflixdnstest7.com
+  - DOMAIN-SUFFIX,netflixdnstest8.com
+  - DOMAIN-SUFFIX,netflixdnstest9.com
+  - DOMAIN-KEYWORD,dualstack.apiproxy-device-prod-nlb-
+  - DOMAIN-KEYWORD,dualstack.ichnaea-web-
+  - IP-CIDR,23.246.0.0/18
+  - IP-CIDR,37.77.184.0/21
+  - IP-CIDR,45.57.0.0/17
+  - IP-CIDR,64.120.128.0/17
+  - IP-CIDR,66.197.128.0/17
+  - IP-CIDR,108.175.32.0/20
+  - IP-CIDR,192.173.64.0/18
+  - IP-CIDR,198.38.96.0/19
+  - IP-CIDR,198.45.48.0/20
+  - IP-CIDR,34.210.42.111/32
+  - IP-CIDR,52.89.124.203/32
+  - IP-CIDR,54.148.37.5/32
+  # Disney+
+  - DOMAIN-KEYWORD,hotstar
+  - DOMAIN-SUFFIX,hotstar.com
+  - DOMAIN-SUFFIX,expressplay.com
+  - DOMAIN-SUFFIX,measurement.com
+  - DOMAIN-SUFFIX,bamgrid.com
+  - DOMAIN-SUFFIX,disneyplus.com
+  - DOMAIN-SUFFIX,disney-plus.net
+  - DOMAIN-SUFFIX,disneystreaming.com
+  - DOMAIN-SUFFIX,dssott.com
+  - DOMAIN,cdn.registerdisney.go.com
+
+ 
