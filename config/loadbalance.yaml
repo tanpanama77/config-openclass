@@ -97,7 +97,7 @@ proxy-groups:
   interval: '30'
  # interface-name: modem
 
-https://github.com/tanpanama77/
+#@by.https://github.com/tanpanama77/
 rule-providers:
   rule_Whatsapp:
     type: file
