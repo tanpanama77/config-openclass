@@ -31,7 +31,7 @@ proxy-groups:
   - DIRECT
   url: http://www.gstatic.com/generate_204
   interval: '30'
-  interface-name: modem
+  interface-name: modem #isi dengan interface
 - name: DIRECT ORBIT
   type: select
   disable-udp: false
@@ -39,7 +39,7 @@ proxy-groups:
   - DIRECT
   url: http://www.gstatic.com/generate_204
   interval: '30'
-  interface-name: orbit
+  interface-name: orbit #isi dengan interface
 - name: DIRECT ETH1
   type: select
   disable-udp: false
@@ -47,7 +47,7 @@ proxy-groups:
   - DIRECT
   url: http://www.gstatic.com/generate_204
   interval: '30'
-  interface-name: eth1
+  interface-name: eth1 #isi dengan interface
 - name: Games-TCP-Lobby 🛴
   type: select
   disable-udp: false
